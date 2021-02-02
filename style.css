@@ -140,6 +140,7 @@ table {
 
 body {
   font-family: "ralewayregular";
+  color: white;
 }
 
 .overflow-wrap {
@@ -151,6 +152,8 @@ nav {
   height: 50px;
   background-color: #364140;
   border-bottom: 3px solid #96ed89;
+  text-align: left;
+  position: absolute;
 }
 
 .flex {
@@ -163,6 +166,9 @@ nav {
 nav .link-wrap {
   max-width: 1200px;
   width: 100%;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
 }
 
 nav .link-wrap div {
@@ -171,7 +177,21 @@ nav .link-wrap div {
   text-transform: uppercase;
 }
 
+nav .bar-icon {
+  position: absolute;
+  margin: 0 auto;
+  right: 5vw;
+}
+
 @media screen and (min-width: 600px) {
+  nav .link-wrap {
+    background: none;
+    height: initial;
+    overflow: visible;
+    position: initial;
+    text-align: left;
+  }
+
   nav .link-wrap div {
     display: inline;
     font-size: initial;
