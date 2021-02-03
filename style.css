@@ -139,12 +139,22 @@ table {
 }
 
 body {
+  text-align: center;
   font-family: "ralewayregular";
   color: white;
 }
 
 .overflow-wrap {
   overflow-x: hidden;
+}
+
+#home {
+  background-color: #2a2c2b;
+  height: 100vh;
+}
+
+.highlight {
+  color: #96ed89;
 }
 
 nav {
@@ -184,6 +194,11 @@ nav .bar-icon {
 }
 
 @media screen and (min-width: 600px) {
+  .text {
+    font-size: 32pt;
+    line-height: 36pt;
+  }
+
   nav .link-wrap {
     background: none;
     height: initial;
