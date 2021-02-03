@@ -153,8 +153,42 @@ body {
   height: 100vh;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  margin: 0 0 20px 0;
+}
+
 .highlight {
   color: #96ed89;
+}
+
+.button {
+  position: relative;
+  padding: 12px 50px 12px 20px;
+  border: 2px solid white;
+  margin-bottom: 53px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #168039;
+}
+
+.button:hover i {
+  transform: rotate(90deg);
+}
+
+.button i {
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s;
 }
 
 nav {
@@ -164,13 +198,6 @@ nav {
   border-bottom: 3px solid #96ed89;
   text-align: left;
   position: absolute;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 nav .link-wrap {
@@ -197,6 +224,10 @@ nav .bar-icon {
   .text {
     font-size: 32pt;
     line-height: 36pt;
+  }
+
+  .button {
+    font-size: 21px;
   }
 
   nav .link-wrap {
