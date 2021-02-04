@@ -150,6 +150,7 @@ body {
 
 #home {
   background-color: #2a2c2b;
+  color: white;
   height: 100vh;
 }
 
@@ -158,6 +159,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.flex.row {
+  flex-direction: row;
 }
 
 .text {
@@ -224,6 +229,11 @@ nav .bar-icon {
   padding: 100px 0 130px 0;
 }
 
+section {
+  color: #2a2c2b;
+  line-height: 24px;
+}
+
 section .container {
   box-sizing: border-box;
   max-width: 1200px;
@@ -246,6 +256,16 @@ section .container {
   margin: 25px 0 70px 0;
 }
 
+.bullet-wrap {
+  height: 230px;
+  padding: 0 10px;
+  justify-content: flex-start;
+}
+
+.bullet-label {
+  margin: 15px 0 5px 0;
+}
+
 .diamond {
   width: 0;
   height: 0;
@@ -263,6 +283,10 @@ section .container {
   height: 0;
   border: 50px solid transparent;
   border-top-color: #67cc8e;
+}
+
+.label-wrap {
+  justify-content: center;
 }
 
 @media screen and (min-width: 600px) {
@@ -303,5 +327,6 @@ section .container {
 @media screen and (min-width: 960px) {
   .sub-row {
     flex-direction: row;
+    padding: 0 15px;
   }
 }
