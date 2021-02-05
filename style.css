@@ -313,6 +313,7 @@ section .container {
 .tech-wrapper img {
   width: 100px;
   height: 100px;
+  padding: 10px 20px;
 }
 
 @media screen and (min-width: 600px) {
@@ -354,9 +355,10 @@ section .container {
   }
   .bio-wrapper {
     padding: 0 50px 0 50px;
+    max-width: 50%;
   }
   .tech-wrapper {
-    width: 50%;
+    max-width: 50%;
   }
 }
 
