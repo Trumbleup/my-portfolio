@@ -1,0 +1,29 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio made with HTML, CSS3, and JavaScript",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "pts": "^0.9.6"
+  },
+  "devDependencies": {
+    "webpack": "^5.21.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trumbleup/my-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trumbleup/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/Trumbleup/my-portfolio#readme"
+}
