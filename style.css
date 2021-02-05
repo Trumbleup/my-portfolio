@@ -263,6 +263,8 @@ section .container {
 }
 
 .bullet-label {
+  font-size: 24px;
+  font-weight: bold;
   margin: 15px 0 5px 0;
 }
 
@@ -287,6 +289,30 @@ section .container {
 
 .label-wrap {
   justify-content: center;
+}
+
+.skills-wrapper {
+  margin-top: 50px;
+}
+
+.personal-picture {
+  width: 200px;
+  height: 200px;
+}
+
+.bio-label {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0 15px 0;
+}
+
+.tech-wrapper {
+  flex-wrap: wrap;
+}
+
+.tech-wrapper img {
+  width: 100px;
+  height: 100px;
 }
 
 @media screen and (min-width: 600px) {
@@ -318,14 +344,24 @@ section .container {
     display: none;
   }
 
+  section .container {
+    padding: 0 10px;
+  }
+
   .container .header {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
+  }
+  .bio-wrapper {
+    padding: 0 50px 0 50px;
+  }
+  .tech-wrapper {
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .sub-row {
+  .row-screen-large {
     flex-direction: row;
     padding: 0 15px;
   }
