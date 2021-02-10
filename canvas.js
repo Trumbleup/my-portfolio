@@ -1,9 +1,7 @@
-Pts.namespace( window );
-
 (function() {
 
     Pts.namespace( this );
-    var space = new CanvasSpace("#canvas").setup({bgcolor: "#123", resize: true, retina: true});
+    var space = new CanvasSpace("#canvas").setup({bgcolor: "#2a2c2b", resize: true, retina: true});
     var form = space.getForm();
   
   
@@ -24,17 +22,10 @@ Pts.namespace( window );
   
       animate: (time, ftime) => {
         // make a line and turn it into an "op" (see the guide on Op for more)
-        let perpend = new Group( space.center.$subtract(0.1), space.pointer ).op( Line.perpendicularFromPt );
         pts.rotate2D( 0.0005, space.center );
-  
         pts.forEach( (p, i) => {
-          // for each point, find the perpendicular to the line
-          let lp = perpend( p );
-          var ratio = Math.min( 1, 1 - lp.$subtract(p).magnitude()/(space.size.x/2) );
-          form.stroke(`rgba(255,255,255,${ratio}`, ratio*2).line( [ p, lp ] );
           form.fillOnly( ["#f03", "#09f", "#0c6"][i%3] ).point( p, 1.5, "circle" );
         });
-  
         // header position
         if (header) {
           let top = window.pageYOffset || document.documentElement.scrollTop;
