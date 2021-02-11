@@ -16,14 +16,14 @@
   
       // create 200 random points
       start:( bound ) => {
-        pts = Create.distributeRandom( space.innerBound, 200 );
+        pts = Create.distributeRandom( space.innerBound, 300 );
         header = document.getElementById("home");
       }, 
   
       animate: (time, ftime) => {
         pts.rotate2D( 0.0005, space.center );
         pts.forEach( (p, i) => {
-          form.fillOnly( ["#67CC8E", "#59D8E6", "#E74C3C"][i%3] ).point( p, 1.5, "circle" );
+          form.fillOnly( ["#67CC8E", "#59D8E6", "#E74C3C"][i%3] ).point( p, 2.5, "circle" );
         });
         // header position
         if (header) {
