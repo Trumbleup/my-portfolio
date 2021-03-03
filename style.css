@@ -224,6 +224,25 @@ nav {
   position: absolute;
 }
 
+@keyframes popDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.fixed-nav div nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  animation: popDown 1.5s;
+}
+
 nav .link-wrap {
   max-width: 1200px;
   width: 100%;
