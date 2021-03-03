@@ -395,6 +395,39 @@ section .container {
   bottom: 24%;
 }
 
+#contact {
+  background: #252934;
+  color: white;
+}
+
+#contact .header {
+  color: white;
+}
+
+#contact .header-bar {
+  background: white;
+  margin: 25px 0 40px 0;
+  width: 110px;
+}
+
+#contact form {
+  min-width: 500px;
+  margin: 40px auto 0 auto;
+}
+
+#contact input,
+#contact textarea {
+  background: #1e242c;
+  border: 0;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 3px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
 @media screen and (min-width: 600px) {
   .text {
     font-size: 32pt;
