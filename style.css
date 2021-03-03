@@ -195,6 +195,7 @@ body {
   position: relative;
   padding: 12px 50px 12px 20px;
   border: 2px solid white;
+  box-sizing: inherit;
   margin-bottom: 53px;
   transition: all 0.3s;
   cursor: pointer;
@@ -334,6 +335,10 @@ section .container {
   padding: 10px 20px;
 }
 
+#portfolio {
+  background: #f5f5f5;
+}
+
 .project {
   position: relative;
 }
@@ -415,7 +420,8 @@ section .container {
   margin: 40px auto 0 auto;
 }
 
-#contact input,
+#contact input[type="text"],
+#contact input[type="email"],
 #contact textarea {
   background: #1e242c;
   border: 0;
@@ -426,6 +432,26 @@ section .container {
   margin-bottom: 3px;
   padding: 10px 15px;
   width: 100%;
+}
+
+#contact textarea {
+  margin-bottom: 5px;
+  min-height: 150px;
+}
+
+#contact .button {
+  background: transparent;
+  color: white;
+  float: right;
+  font-size: 16px;
+  padding: 10px 30px;
+  outline: 0;
+  margin: 5px 0 0 0;
+}
+
+footer {
+  background: #1b242f;
+  padding: 70px 0 50px 0;
 }
 
 @media screen and (min-width: 600px) {
