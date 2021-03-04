@@ -18,14 +18,9 @@ const about = document.querySelector("#about");
 const portfolio = document.querySelector("#portfolio");
 const contact = document.querySelector("#contact");
 
-const scrollToHome = () => {
-    home.scrollIntoView({
-        behavior: 'smooth',
-    });
-}
-
-const scrollToPortfolio = () => {
-    portfolio.scrollIntoView({
+const scrollToSection = (event) => {
+    const destination = document.querySelector(`#${event.target.getAttribute("data-link")}`);
+    destination.scrollIntoView({
         behavior: 'smooth',
     });
 }
@@ -36,7 +31,7 @@ const topOfAbout = about.offsetTop;
 const fixNav = () => {
     if (window.scrollY >= topOfAbout + nav.offsetHeight) {
         document.body.classList.add('fixed-nav');
-    } else {
+    } else if (window.scrollY <= topOfAbout){
         document.body.classList.remove('fixed-nav');
     }
 }

@@ -30,10 +30,10 @@
             </section>
             <nav class="flex">
                 <div class="link-wrap">
-                    <div class="page-link" onClick="scrollToHome()">home</div>
-                    <div class="page-link">about</div>
-                    <div class="page-link" onClick="scrollToPortfolio()">portfolio</div>
-                    <div class="page-link">contact</div>
+                    <div class="page-link" data-link="home" onClick="scrollToSection(event)">home</div>
+                    <div class="page-link" data-link="about" onClick="scrollToSection(event)">about</div>
+                    <div class="page-link" data-link="portfolio" onClick="scrollToSection(event)">portfolio</div>
+                    <div class="page-link" data-link="contact" onClick="scrollToSection(event)">contact</div>
                 </div>
                 <i class="fas fa-bars bar-icon"></i>
             </nav>
