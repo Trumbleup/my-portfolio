@@ -53,19 +53,29 @@ const setHighlightTextEvent = () => {
     const portfolio = document.getElementById('portfolio');
     const contact = document.getElementById('contact');
 
-    if (window.scrollY > home.offsetTop && window.scrollY < about.offsetTop) {
+    if (window.scrollY >= home.offsetTop && window.scrollY <= about.offsetTop) {
         highlightText("home");
     }
-    if (window.scrollY > about.offsetTop && window.scrollY < portfolio.offsetTop) {
+    if (window.scrollY >= about.offsetTop && window.scrollY <= portfolio.offsetTop) {
         highlightText("about");
     } 
-    if (window.scrollY > portfolio.offsetTop && window.scrollY < contact.offsetTop) {
+    if (window.scrollY >= portfolio.offsetTop && window.scrollY <= contact.offsetTop) {
         highlightText("portfolio");
     }
-    if (window.scrollY > contact.offsetTop) {
+    if (window.scrollY >= contact.offsetTop) {
         highlightText("contact");
     }
 };
+
+const onScrollInit = (items) => {
+    items.forEach(element => {
+        console.log(element);
+        // const animationClass = element.getAttribute("data-animation");
+        // const animationDelay = element.getAttribute("data-delay");
+    })
+}
+
+onScrollInit(document.querySelectorAll(".waypoint"));
 
 window.addEventListener('scroll', fixNav);
 window.addEventListener('scroll', setHighlightTextEvent)
