@@ -13,27 +13,19 @@ const modalText = {
     }
 };
 
-
-
 const scrollToSection = (event) => {
     const destination = document.querySelector(`#${event.target.getAttribute("data-link")}`);
     destination.scrollIntoView({
         behavior: 'smooth',
     });
-
-}
-
-
+};
 
 const setNavLinksEvents = () => {
     const navLinks = document.querySelectorAll(".page-link");
     navLinks.forEach(navLink => {
         navLink.addEventListener('click', scrollToSection);
     });
-}
-
-
-
+};
 
 const fixNav = () => {
     const nav = document.querySelector('nav');
@@ -45,7 +37,36 @@ const fixNav = () => {
     } else if (window.scrollY <= topOfAbout){
         document.body.classList.remove('fixed-nav');
     }
+};
+
+const highlightText = (anchor) => {
+    const activeLink = document.querySelector("nav .link-wrap .active");
+    activeLink.classList.remove("active");
+
+    const newActiveLink = document.querySelector(`nav .link-wrap [data-link="${anchor}"]`);
+    newActiveLink.classList.add("active");
 }
 
+const setHighlightTextEvent = () => {
+    const home = document.getElementById('home');
+    const about = document.getElementById('about');
+    const portfolio = document.getElementById('portfolio');
+    const contact = document.getElementById('contact');
+
+    if (window.scrollY > home.offsetTop && window.scrollY < about.offsetTop) {
+        highlightText("home");
+    }
+    if (window.scrollY > about.offsetTop && window.scrollY < portfolio.offsetTop) {
+        highlightText("about");
+    } 
+    if (window.scrollY > portfolio.offsetTop && window.scrollY < contact.offsetTop) {
+        highlightText("portfolio");
+    }
+    if (window.scrollY > contact.offsetTop) {
+        highlightText("contact");
+    }
+};
+
 window.addEventListener('scroll', fixNav);
+window.addEventListener('scroll', setHighlightTextEvent)
 setNavLinksEvents();
