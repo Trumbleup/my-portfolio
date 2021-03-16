@@ -13,7 +13,7 @@ const modalText = {
     }
 };
 
-const navLinks = document.querySelectorAll(".page-link");
+
 
 const scrollToSection = (event) => {
     const destination = document.querySelector(`#${event.target.getAttribute("data-link")}`);
@@ -23,14 +23,23 @@ const scrollToSection = (event) => {
 
 }
 
-navLinks.forEach(navLink => {
-    navLink.addEventListener('click', scrollToSection);
-});
 
-const nav = document.querySelector('nav');
-const topOfAbout = about.offsetTop;
+
+const setNavLinksEvents = () => {
+    const navLinks = document.querySelectorAll(".page-link");
+    navLinks.forEach(navLink => {
+        navLink.addEventListener('click', scrollToSection);
+    });
+}
+
+
+
 
 const fixNav = () => {
+    const nav = document.querySelector('nav');
+    const about = document.getElementById('about');
+    const topOfAbout = about.offsetTop;
+
     if (window.scrollY >= topOfAbout + nav.offsetHeight) {
         document.body.classList.add('fixed-nav');
     } else if (window.scrollY <= topOfAbout){
@@ -39,3 +48,4 @@ const fixNav = () => {
 }
 
 window.addEventListener('scroll', fixNav);
+setNavLinksEvents();
