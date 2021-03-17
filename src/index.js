@@ -67,11 +67,12 @@ const setHighlightTextEvent = () => {
     }
 };
 
-const onScrollInit = (items) => {
-    items.forEach(element => {
-        console.log(element);
-        // const animationClass = element.getAttribute("data-animation");
-        // const animationDelay = element.getAttribute("data-delay");
+const onScrollInit = (elements) => {
+    elements.forEach(element => {
+        const dataAnimation = element.getAttribute(`data-animation`);
+        const dataDelay = element.getAttribute('data-delay');
+        element.classList.add(dataAnimation);
+        element.style = `animation-delay: ${dataDelay}`;
     })
 }
 
