@@ -71,10 +71,15 @@ const onScrollInit = (elements) => {
     elements.forEach(element => {
         const dataAnimation = element.getAttribute(`data-animation`);
         const dataDelay = element.getAttribute('data-delay');
-        element.classList.add(dataAnimation);
-        element.style = `animation-delay: ${dataDelay}`;
-    })
-}
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= element.offsetTop - 600) {
+                element.classList.add(dataAnimation);
+                element.style = `animation-delay: ${dataDelay}`;
+                console.log(window.scrollY, element.offsetTop);
+            }
+        });
+    });
+};
 
 onScrollInit(document.querySelectorAll(".waypoint"));
 
