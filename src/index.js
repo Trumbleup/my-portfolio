@@ -75,14 +75,23 @@ const onScrollInit = (elements) => {
             if (window.scrollY >= element.offsetTop - 550) {
                 element.classList.add(dataAnimation);
                 element.style = `animation-delay: ${dataDelay}`;
-                console.log(window.scrollY, element.offsetTop);
             }
         });
     });
 };
 
-onScrollInit(document.querySelectorAll(".waypoint"));
+const toggleMobileNav = () => {
+    const mobileNavElement = document.querySelector(".mobile-link-wrap");
+    if (mobileNavElement.classList.contains("visible")) {
+        mobileNavElement.classList.remove("visible");
+    } else {
+        mobileNavElement.classList.add("visible");
+    }
+};
+
 
 window.addEventListener('scroll', fixNav);
-window.addEventListener('scroll', setHighlightTextEvent)
+window.addEventListener('scroll', setHighlightTextEvent);
+document.querySelector(".bar-icon").addEventListener("click", toggleMobileNav);
+onScrollInit(document.querySelectorAll(".waypoint"));
 setNavLinksEvents();

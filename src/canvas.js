@@ -80,7 +80,7 @@ window.demoDescription = "In a field of points that revolves around a center, dr
 (function() {
 
   Pts.namespace( this );
-  var space = new CanvasSpace("#canvas").setup({bgcolor: "#123", resize: true, retina: true});
+  var space = new CanvasSpace("#canvas").setup({bgcolor: "#1b242f", resize: true, retina: true});
   var form = space.getForm();
 
 
@@ -132,7 +132,7 @@ window.demoDescription = "In a field of points that revolves around a center, dr
     resize: () => {
       clearTimeout( timeOutId );
       setTimeout( () => {
-        pts = Create.distributeRandom( space.innerBound, 50 );
+        pts = Create.distributeRandom( space.innerBound, 75 );
       }, 500 );
     }
 
