@@ -13,8 +13,8 @@ const { Line } = require("pts");
   var timeOutId = -1;
   var header = null;
 
-  const angle = -(window.innerWidth * .05)
-  const line = new Line(0, angle)
+  const angle = -(window.innerWidth * .05);
+  const line = new Line(0, angle);
 
 
   space.add({ 
