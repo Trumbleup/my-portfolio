@@ -4,6 +4,7 @@ import onScrollInit from "./modules/onScrollInit";
 import toggleMobileNav from "./modules/toggleMobileNav";
 import fixNav from "./modules/fixNav";
 import setProjectButtons from "./modules/setProjectButtons"
+import setModalEvents from "./modules/setModalEvents";
 
 
 window.addEventListener('scroll', fixNav);
@@ -12,3 +13,4 @@ document.querySelector(".bar-icon").addEventListener("click", toggleMobileNav);
 onScrollInit(document.querySelectorAll(".waypoint"));
 setNavLinksEvents();
 setProjectButtons();
+setModalEvents();
