@@ -156,6 +156,10 @@ body {
   pointer-events: none;
 }
 
+.modal-wrap.visible {
+  pointer-events: initial;
+}
+
 .mask {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
