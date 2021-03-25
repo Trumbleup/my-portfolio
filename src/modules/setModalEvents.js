@@ -3,7 +3,6 @@ const setModalEvents = () => {
     const modalWrap = document.querySelector(".modal-wrap");
     modalMask.addEventListener("click", () => {
         modalWrap.classList.remove("visible");
-        console.log("hi");
     });
 };
 
