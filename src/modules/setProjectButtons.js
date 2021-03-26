@@ -9,7 +9,9 @@ const setProjectInfo = (id) => {
 
     const projectDetails = document.querySelector(".modal .details");
     projectDetails.innerHTML = modalText[id].details;
-    
+
+    const projectLink = document.querySelector(".modal .link");
+    projectLink.href = modalText[id].link;
 }
 
 const setModal = () => {

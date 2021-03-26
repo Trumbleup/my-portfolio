@@ -64,6 +64,6 @@ const { Line } = require("pts");
   //// ----
   
 
-  space.bindMouse().bindTouch().play();
+  // space.bindMouse().bindTouch().play();
 
 })();;
