@@ -175,12 +175,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 700px;
-  height: 800px;
+  height: 716px;
   background: white;
   opacity: 0;
-}
-
-.modal-wrap.visible {
+  position: relative;
 }
 
 .modal-wrap.visible .mask {
@@ -201,6 +199,32 @@ body {
 
 .project-info {
   color: black;
+  padding: 35px 60px 90px 25px;
+  text-align: left;
+}
+
+.project-info .title {
+  font-size: 24px;
+}
+
+.project-info .info {
+  font-size: 18px;
+  padding: 5px 0px 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #c0c0c0;
+}
+
+.project-info .details {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.modal-button {
+  width: 120px;
+  height: 40px;
+  background: green;
+  position: absolute;
+  bottom: 20px;
 }
 
 #home {
@@ -269,6 +293,7 @@ body {
   position: absolute;
   right: 20px;
   transition: transform 0.3s;
+  pointer-events: none;
 }
 
 nav {
