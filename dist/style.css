@@ -267,17 +267,6 @@ body {
   overflow: hidden;
 }
 
-.image-container {
-  width: 2100px;
-  height: 450px;
-  clear: both;
-  position: relative;
-  -webkit-transition: left 2s;
-  -moz-transition: left 2s;
-  -o-transition: left 2s;
-  transition: left 2s;
-}
-
 .slide {
   float: left;
   margin: 0px;
