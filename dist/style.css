@@ -285,32 +285,30 @@ body {
   position: relative;
 }
 
-#slide-1:target ~ .image-container {
-  left: 0px;
-}
-
-#slide-2:target ~ .image-container {
-  left: -700px;
-}
-
-#slide-3:target ~ .image-container {
-  left: -1400px;
-}
-
 .slider-buttons {
   position: relative;
-  top: -20px;
+  top: -70px;
 }
 
-.slider-buttons a {
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  border-radius: 50px;
-  background-color: #168039;
+.slider-buttons .slider-button {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  opacity: 0.1;
+}
+
+#prev.slider-button {
+  float: left;
+}
+
+#next.slider-button {
+  float: right;
 }
 
 .project-info {
+  box-sizing: border-box;
+  border-top: 3px solid black;
   color: black;
   padding: 35px 60px 90px 25px;
   text-align: left;
@@ -612,20 +610,21 @@ section .container {
 }
 
 .card {
-  width: 390px;
-  height: 300px;
+  width: 430px;
+  height: 320px;
   opacity: 1;
   transition: opacity 0.5s;
   background-repeat: no-repeat;
   background-size: cover;
+  border: 2px solid black;
 }
 
 #portfolio #projects :nth-child(1) .card {
-  background-image: url("./images/fruition-image.PNG");
+  background: url("./images/fruition-image.PNG") center center/cover;
 }
 
 #portfolio #projects :nth-child(2) .card {
-  background-image: url("./images/jsleeve-photo.PNG");
+  background: url("./images/jsleeve-photo.PNG") center center/cover;
 }
 
 #portfolio #projects .project:hover .card {
