@@ -263,7 +263,6 @@ body {
 .slider {
   width: 700px;
   height: 450px;
-  background-color: black;
   overflow: hidden;
 }
 
@@ -272,6 +271,7 @@ body {
   margin: 0px;
   padding: 0px;
   position: relative;
+  background: blue;
 }
 
 .slider-buttons {

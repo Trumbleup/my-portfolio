@@ -12,7 +12,13 @@ const setProjectInfo = (id) => {
 
     const projectLink = document.querySelector(".modal .link");
     projectLink.href = modalText[id].link;
-}
+
+    const modalSlides = document.querySelectorAll(".modal .slide");
+    modalSlides.forEach((slide, index) => {
+        slide.style.background = `url("./images/slides/${id}-slide-${index}.PNG") center center/cover`;
+        slide.style.backgroundSize = "cover";
+    });
+};
 
 const setModal = () => {
     const modalWrap = document.querySelector(".modal-wrap");
