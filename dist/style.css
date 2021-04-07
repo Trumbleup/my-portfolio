@@ -260,10 +260,22 @@ body {
   z-index: 102;
 }
 
-.slider {
+.slider-wrap {
   width: 700px;
   height: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-view {
   overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  left: -700px;
+  width: 10000px;
 }
 
 .slide {
@@ -271,12 +283,12 @@ body {
   margin: 0px;
   padding: 0px;
   position: relative;
-  background: blue;
 }
 
 .slider-buttons {
   position: relative;
-  top: -70px;
+  margin: 0 auto;
+  bottom: 70px;
 }
 
 .slider-buttons .slider-button {
@@ -293,6 +305,10 @@ body {
 
 #next.slider-button {
   float: right;
+}
+
+.transition {
+  transition: 0.7s;
 }
 
 .project-info {

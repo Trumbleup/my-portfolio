@@ -20,9 +20,32 @@ const setProjectInfo = (id) => {
     });
 };
 
+const shiftSlide = (direction) => {
+    const slider = document.querySelector(".slider");
+    slider.classList.add("transition");
+    slider.style.transform = `translateX(${direction} * 700px)`;
+    if (direction == 1) {
+        document.querySelector(".slide:first-child").before(document.querySelector(".slide:last-child"));
+        console.log("hi");
+    } else if (direction == -1) {
+        document.querySelector(".slide:last-child").after(document.querySelector(".slide:first-child"));
+        console.log("-hi");
+    }
+    slider.classList.remove("transition");
+}
+
 const setModal = () => {
     const modalWrap = document.querySelector(".modal-wrap");
     modalWrap.classList.add("visible");
+
+    const nextButton = document.querySelector("#next");
+    nextButton.addEventListener("click", () => {
+        shiftSlide(-1);
+    });
+    const prevButton = document.querySelector("#prev");
+    prevButton.addEventListener("click", () => {
+        shiftSlide(1);
+    });
 }
 
 const setProjectButtons = () => {
