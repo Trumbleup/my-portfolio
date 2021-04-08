@@ -55,7 +55,11 @@ const { Line } = require("pts");
     resize: () => {
       clearTimeout( timeOutId );
       setTimeout( () => {
-        pts = Create.distributeRandom( space.innerBound, 75 );
+        if (window.innerWidth >= 600) {
+          pts = Create.distributeRandom( space.innerBound, 75 );
+        } else {
+          pts = Create.distributeRandom( space.innerBound, 45 );
+        }
       }, 500 );
     }
 
