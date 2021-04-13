@@ -1,4 +1,5 @@
 import modalText from "./modalText.js";
+import setModal from "./setModal.js";
 
 const setProjectInfo = (id) => {
     const projectTitle = document.querySelector(".modal .title");
@@ -19,38 +20,6 @@ const setProjectInfo = (id) => {
         slide.style.backgroundSize = "cover";
     });
 };
-
-const shiftSlide = (direction) => {
-    const slider = document.querySelector(".slider");
-    slider.classList.add("transition");
-    slider.style.transform = `translateX(${direction * 700}px)`;
-    setTimeout(() => {
-        if (direction == 1) {
-            document.querySelector(".slide:first-child").before(document.querySelector(".slide:last-child"));
-            console.log("hi");
-        } else if (direction == -1) {
-            document.querySelector(".slide:last-child").after(document.querySelector(".slide:first-child"));
-            console.log("-hi");
-        }
-        slider.classList.remove("transition");
-        slider.style.transform = `translateX(0px)`;
-    }, 700);
-    
-}
-
-const setModal = () => {
-    const modalWrap = document.querySelector(".modal-wrap");
-    modalWrap.classList.add("visible");
-
-    const nextButton = document.querySelector("#next");
-    nextButton.addEventListener("click", () => {
-        shiftSlide(-1);
-    });
-    const prevButton = document.querySelector("#prev");
-    prevButton.addEventListener("click", () => {
-        shiftSlide(1);
-    });
-}
 
 const setProjectButtons = () => {
     const projectButtons = document.querySelectorAll(".project-button");

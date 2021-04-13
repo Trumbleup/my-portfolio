@@ -5,6 +5,18 @@ import toggleMobileNav from "./modules/toggleMobileNav";
 import fixNav from "./modules/fixNav";
 import setProjectButtons from "./modules/setProjectButtons"
 import setModalEvents from "./modules/setModalEvents";
+import shiftSlide from "./modules/shiftSlide";
+
+
+
+const nextButton = document.querySelector("#next");
+nextButton.addEventListener("click", () => {
+    shiftSlide(-1);
+});
+const prevButton = document.querySelector("#prev");
+prevButton.addEventListener("click", () => {
+    shiftSlide(1);
+});
 
 
 window.addEventListener('scroll', fixNav);
