@@ -58,7 +58,7 @@ const { Line } = require("pts");
         if (window.innerWidth >= 600) {
           pts = Create.distributeRandom( space.innerBound, 75 );
         } else {
-          pts = Create.distributeRandom( space.innerBound, 45 );
+          pts = Create.distributeRandom( space.innerBound, 30 );
         }
       }, 500 );
     }
