@@ -21,7 +21,7 @@ const setHighlightTextEvent = () => {
     if (window.scrollY >= portfolio.offsetTop && window.scrollY <= contact.offsetTop) {
         highlightText("portfolio");
     }
-    if (window.scrollY >= contact.offsetTop) {
+    if (window.scrollY >= contact.offsetTop - 200) {
         highlightText("contact");
     }
 };
