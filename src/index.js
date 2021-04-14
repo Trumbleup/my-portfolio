@@ -6,6 +6,7 @@ import fixNav from "./modules/fixNav";
 import setProjectButtons from "./modules/setProjectButtons"
 import setModalEvents from "./modules/setModalEvents";
 import shiftSlide from "./modules/shiftSlide";
+import contact from "./modules/contact";
 
 
 
@@ -26,3 +27,4 @@ onScrollInit(document.querySelectorAll(".waypoint"));
 setNavLinksEvents();
 setProjectButtons();
 setModalEvents();
+contact();

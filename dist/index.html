@@ -158,11 +158,13 @@
                     <div class="header">CONTACT</div>
                     <div class="header-bar"></div>
                     <div>Please get in contact with me about anything!</div>
-                    <form>
+                    <form method="POST" id="contact-form">
                        <input placeholder="Name" type="text" name="name" required> 
-                       <input placeholder="Enter Email" type="email" name="email" required>
+                       <input placeholder="Enter Email" type="email" name="_replyto" required>
                        <textarea placeholder="Your Message" type="text" name="message"></textarea>
-                       <input class="button" type="submit" id="submit" vlue="SUBMIT"> 
+                       <input class="button" type="submit" id="submit" value="SUBMIT"> 
+                       <input type="hidden" name="_subject" value="Website contact" />
+                       <input type="text" name="_gotcha" style="display:none" />
                     </form>
                 </div>
             </section>
