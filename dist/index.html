@@ -161,8 +161,9 @@
                     <form id="contact-form">
                         <input placeholder="Name" type="text" name="name" id="name" required>  
                         <input placeholder="Enter Email" type="email" name="email" id="email" required>
-                        <textarea placeholder="Your Message" type="text" name="message" id="message"></textarea>
-                        <input class="button" type="submit" id="submit" value="SUBMIT"> 
+                        <textarea placeholder="Your Message" type="text" name="message" id="message" required minlength="1"></textarea>
+                        <input class="button" type="submit" id="submit" value="SUBMIT">
+                        <div class="confirm"></div> 
                         <input type="hidden" name="_subject" value="Website contact" />
                         <input type="text" name="_gotcha" style="display:none" />
                     </form>

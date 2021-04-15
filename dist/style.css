@@ -735,6 +735,21 @@ section .container {
   margin: 5px 0 0 0;
 }
 
+#contact .confirm {
+  float: right;
+  font-size: 14px;
+  padding: 10px 30px;
+  margin: 5px 0 0 0;
+}
+
+#contact .confirm.success {
+  color: green;
+}
+
+#contact .confirm.error {
+  color: red;
+}
+
 footer {
   display: flex;
   justify-content: center;
