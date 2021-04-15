@@ -1,25 +1,24 @@
+import axios from "axios";
+
 const contact = async () => {
     const myForm = document.getElementById("contact-form");
-
     myForm.addEventListener("submit", (e) => {
+        const name = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const message = document.querySelector("#message").value;
         e.preventDefault();
-
-        const formData = new FormData(this);
-
-        fetch("https://formspree.io/f/xzbyzplk", {
+        axios({
+            url: "https://formspree.io/f/xzbyzplk",
             method: "post",
-            body: JSON.stringify(formData),
             headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
+                "Accept": 'application/json'
+            },
+            data: {
+                name: name,
+                email: email,
+                message: message
             }
-        }).then((response) => {
-            return response.json();
-        }).then((response) => {
-            console.log(response);
-        }).catch((error) => {
-            console.error(error);
-        })
+        }).then((response) => { console.log(response); })
     })
 }
 
