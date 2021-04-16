@@ -686,6 +686,10 @@ section .container {
   bottom: 24%;
 }
 
+.medium-green {
+  color: #67cc8e;
+}
+
 #contact {
   background: #252934;
   color: white;
@@ -758,6 +762,24 @@ section .container {
 
 #contact i.pending {
   opacity: 1;
+}
+
+@keyframes grow {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.grow {
+  animation: grow 1s ease both;
 }
 
 footer {
