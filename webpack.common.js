@@ -2,15 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
     entry: {
         index: './src/index.js',
         canvas: './src/canvas.js',
     },
-    devServer: {
-        contentBase: './dist',
-    },
-    devtool: 'inline-source-map',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
