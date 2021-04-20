@@ -16,7 +16,7 @@ const setProjectInfo = (id) => {
 
     const modalSlides = document.querySelectorAll(".modal .slide");
     modalSlides.forEach((slide, index) => {
-        slide.style.background = `url("./images/slides/${id}-slide-${index}.PNG") center center/cover`;
+        slide.style.background = `url("./assets/images/slides/${id}-slide-${index}.PNG") center center/cover`;
         slide.style.backgroundSize = "cover";
     });
 };

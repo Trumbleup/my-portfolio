@@ -132,8 +132,8 @@ table {
 
 @font-face {
   font-family: "ralewayregular";
-  src: url("./fonts/raleway-regular-webfont.woff2") format("woff2"),
-    url("./fonts/raleway-regular-webfont.woff") format("woff");
+  src: url("./assets/fonts/raleway-regular-webfont.woff2") format("woff2"),
+    url("./assets/fonts/raleway-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -639,11 +639,11 @@ section .container {
 }
 
 #portfolio #projects :nth-child(1) .card {
-  background: url("./images/jsleeve-photo.PNG") center center/cover;
+  background: url("./assets/images/jsleeve-photo.PNG") center center/cover;
 }
 
 #portfolio #projects :nth-child(2) .card {
-  background: url("./images/fruition-image.PNG") center center/cover;
+  background: url("./assets/images/fruition-image.PNG") center center/cover;
 }
 
 #portfolio #projects .project:hover .card {

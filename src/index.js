@@ -7,6 +7,8 @@ import setProjectButtons from "./modules/setProjectButtons"
 import setModalEvents from "./modules/setModalEvents";
 import shiftSlide from "./modules/shiftSlide";
 import contact from "./modules/contact";
+import './style.css';
+
 
 
 

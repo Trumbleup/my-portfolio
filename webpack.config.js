@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -14,6 +15,13 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Danny Trumble',
+            template: path.resolve(__dirname, './src/template.html'),
+            fileName: 'index.html',
+        }),
+    ],
     module: {
         rules: [
             {
@@ -22,8 +30,26 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource'
-            }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/images/'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/inline',
+            },
+            {
+                test:/\.html$/,
+                use: [
+                  'html-loader'
+                ]
+            },
         ]
     }
 }
