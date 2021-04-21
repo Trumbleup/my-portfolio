@@ -1,8 +1,8 @@
-const { Line } = require("pts");
+import {CanvasSpace, Create, Pt, Group, Line} from "pts"
 
 (function() {
 
-  Pts.namespace( this );
+
   var space = new CanvasSpace("#canvas").setup({bgcolor: "#1b242f", resize: true, retina: true});
   var form = space.getForm();
 
