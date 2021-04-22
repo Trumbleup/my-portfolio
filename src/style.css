@@ -302,8 +302,11 @@ a {
   position: relative;
   width: 70px;
   height: 70px;
-  background-color: black;
-  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-button i {
+  opacity: 1;
 }
 
 #prev.slider-button {
@@ -352,7 +355,7 @@ a {
   bottom: 20px;
 }
 
-.modal i {
+.project-info #x-button {
   position: absolute;
   bottom: 30px;
   right: 20px;

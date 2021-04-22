@@ -3,7 +3,7 @@ import shiftSlide from "./shiftSlide.js";
 const setModalEvents = () => {
     const modalMask = document.querySelector(".mask");
     const modalWrap = document.querySelector(".modal-wrap");
-    const closeIcon = document.querySelector(".modal i");
+    const closeIcon = document.querySelector(".modal #x-button");
     const nextButton = document.querySelector("#next");
     const prevButton = document.querySelector("#prev");
 

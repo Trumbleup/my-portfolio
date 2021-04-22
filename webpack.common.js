@@ -16,14 +16,13 @@ module.exports = {
             title: 'Danny Trumble',
             template: path.resolve(__dirname, './src/template.html'),
             fileName: 'index.html',
+            minify: {
+                removeRedundantAttributes: false,
+            }
         }),
     ],
     module: {
         rules: [
-            {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader']
-            },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 use: [
