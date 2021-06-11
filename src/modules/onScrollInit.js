@@ -3,7 +3,7 @@ const onScrollInit = (elements) => {
         const dataAnimation = element.getAttribute(`data-animation`);
         const dataDelay = element.getAttribute('data-delay');
         window.addEventListener('scroll', () => {
-            if (window.scrollY >= element.offsetTop - 550) {
+            if (window.scrollY >= element.offsetTop - 750) {
                 element.classList.add(dataAnimation);
                 element.style = `animation-delay: ${dataDelay}`;
             }

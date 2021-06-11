@@ -7,6 +7,9 @@ import jsleeveImg2 from "../assets/images/slides/jsleeve-slide-2.PNG";
 import weatherAppImg0 from "../assets/images/slides/weatherApp-slide-0.PNG";
 import weatherAppImg1 from "../assets/images/slides/weatherApp-slide-1.PNG";
 import weatherAppImg2 from "../assets/images/slides/weatherApp-slide-2.PNG";
+import robofriendsImg0 from "../assets/images/slides/robofriends-slide-0.PNG";
+import robofriendsImg1 from "../assets/images/slides/robofriends-slide-1.PNG";
+import robofriendsImg2 from "../assets/images/slides/robofriends-slide-2.PNG";
 
 const modalText = {
     fruition: {
@@ -40,6 +43,17 @@ const modalText = {
             weatherAppImg0,
             weatherAppImg1,
             weatherAppImg2
+        ]
+    },
+    robofriends: {
+        title: "Robofriends",
+        info: "Project from the Zero to Mastery course by Andrei Neogie",
+        details: "Developed using React.js",
+        link: "https://trumbleup.github.io/robofriends/",
+        images: [
+            robofriendsImg0,
+            robofriendsImg1,
+            robofriendsImg2
         ]
     }
 };

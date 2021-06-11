@@ -627,6 +627,11 @@ section .container {
   background: #f5f5f5;
 }
 
+#projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .project {
   position: relative;
 }
@@ -651,6 +656,10 @@ section .container {
 
 #portfolio #projects :nth-child(3) .card {
   background: url("./assets/images/weatherApp-image.PNG") center center/cover;
+}
+
+#portfolio #projects :nth-child(4) .card {
+  background: url("./assets/images/robofriends-image.PNG") center center/cover;
 }
 
 #portfolio #projects .project:hover .card {
