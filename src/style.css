@@ -649,6 +649,10 @@ section .container {
   background: url("./assets/images/fruition-image.PNG") center center/cover;
 }
 
+#portfolio #projects :nth-child(3) .card {
+  background: url("./assets/images/weatherApp-image.PNG") center center/cover;
+}
+
 #portfolio #projects .project:hover .card {
   opacity: 0;
   transition: opacity 0.5s;
