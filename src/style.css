@@ -655,11 +655,19 @@ section .container {
 }
 
 #portfolio #projects :nth-child(3) .card {
-  background: url("./assets/images/weatherApp-image.PNG") center center/cover;
+  background: url("./assets/images/crwn-clothing-image.PNG") center center/cover;
 }
 
 #portfolio #projects :nth-child(4) .card {
   background: url("./assets/images/robofriends-image.PNG") center center/cover;
+}
+
+#portfolio #projects :nth-child(5) .card {
+  background: url("./assets/images/battleship-image.PNG") center center/cover;
+}
+
+#portfolio #projects :nth-child(6) .card {
+  background: url("./assets/images/weatherApp-image.PNG") center center/cover;
 }
 
 #portfolio #projects .project:hover .card {
